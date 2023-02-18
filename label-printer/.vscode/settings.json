@@ -1,0 +1,10 @@
+{
+    "editor.autoSurround": "languageDefined",
+    "editor.autoIndent": "advanced",
+    "editor.codeLens": true,
+    "editor.codeLensFontFamily": "Hasklug Nerd Font",
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "omnisharp.autoStart": true,
+    "omnisharp.defaultLaunchSolution": "${workspaceFolder}/label-printer.sln",
+    "editor.fontLigatures": true
+}

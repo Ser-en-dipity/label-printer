@@ -1,0 +1,22 @@
+2023-02-15 08:31:44.693 +00:00 [DBG] Hosting starting
+2023-02-15 08:31:45.209 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-15 08:31:45.560 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-15 08:31:45.561 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-15 08:31:45.564 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-15 08:31:45.567 +00:00 [INF] Hosting environment: Development
+2023-02-15 08:31:45.569 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-15 08:31:45.571 +00:00 [DBG] Hosting started
+2023-02-15 08:31:55.701 +00:00 [INF] Application is shutting down...
+2023-02-15 08:31:55.707 +00:00 [DBG] Hosting stopping
+2023-02-15 08:31:55.774 +00:00 [DBG] Hosting stopped
+2023-02-15 11:20:23.036 +00:00 [DBG] Hosting starting
+2023-02-15 11:20:23.401 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-15 11:20:23.676 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-15 11:20:23.677 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-15 11:20:23.678 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-15 11:20:23.680 +00:00 [INF] Hosting environment: Development
+2023-02-15 11:20:23.680 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-15 11:20:23.681 +00:00 [DBG] Hosting started
+2023-02-15 11:20:40.175 +00:00 [INF] Application is shutting down...
+2023-02-15 11:20:40.182 +00:00 [DBG] Hosting stopping
+2023-02-15 11:20:40.251 +00:00 [DBG] Hosting stopped

@@ -1,0 +1,8 @@
+#!/bin/sh
+dotnet publish --configuration=Release \
+ -p:PublishReadyToRun=true \
+ -p:PublishReadyToRunShowWarnings=true \
+ --self-contained=true \
+ -o release \
+ -r linux-arm64
+

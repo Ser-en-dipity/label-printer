@@ -1,0 +1,1287 @@
+2023-02-16 04:49:09.398 +00:00 [DBG] Hosting starting
+2023-02-16 04:50:36.094 +00:00 [DBG] Hosting starting
+2023-02-16 04:54:47.537 +00:00 [DBG] Hosting starting
+2023-02-16 04:54:48.132 +00:00 [DBG] Starting gRPC call. Method type: '"Unary"', URI: '"http://192.168.12.41:1234/ICNC.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-16 04:54:48.228 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:1234
+2023-02-16 04:54:48.248 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:48.267 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-16 04:54:48.282 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 04:54:48.355 +00:00 [DBG] Picked queued.
+2023-02-16 04:54:48.402 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:48.460 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:48.480 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 04:54:48.481 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:48.507 +00:00 [DBG] Picked failure with status: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+2023-02-16 04:54:48.532 +00:00 [ERR] Error starting gRPC call.
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-16 04:54:48.554 +00:00 [INF] Call failed with gRPC error status. Status code: '"Unavailable"', Message: 'Error connecting to subchannel.'.
+2023-02-16 04:54:48.556 +00:00 [DBG] Finished gRPC call.
+2023-02-16 04:54:48.565 +00:00 [DBG] gRPC call canceled.
+2023-02-16 04:54:48.568 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+   at Grpc.Net.Client.Internal.HttpClientCallInvoker.BlockingUnaryCall[TRequest,TResponse](Method`2 method, String host, CallOptions options, TRequest request)
+   at Grpc.Core.Interceptors.InterceptingCallInvoker.<BlockingUnaryCall>b__3_0[TRequest,TResponse](TRequest req, ClientInterceptorContext`2 ctx)
+   at Grpc.Core.ClientBase.ClientBaseConfiguration.ClientBaseConfigurationInterceptor.BlockingUnaryCall[TRequest,TResponse](TRequest request, ClientInterceptorContext`2 context, BlockingUnaryCallContinuation`2 continuation)
+   at Grpc.Core.Interceptors.InterceptingCallInvoker.BlockingUnaryCall[TRequest,TResponse](Method`2 method, String host, CallOptions options, TRequest request)
+   at ICNC.Rpi.PrintCmdHandler.PrintCmdHandlerClient.PrintLabel(Empty request, CallOptions options) in /home/king/erp/rpi/label-printer/src/QR.Api/obj/Debug/net7.0/PrintcmdGrpc.cs:line 102
+   at ICNC.Rpi.PrintCmdHandler.PrintCmdHandlerClient.PrintLabel(Empty request, Metadata headers, Nullable`1 deadline, CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/obj/Debug/net7.0/PrintcmdGrpc.cs:line 97
+   at ICNC.Rpi.Worker.StartAsync(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 26
+2023-02-16 04:54:48.786 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-16 04:54:49.031 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-16 04:54:49.032 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-16 04:54:49.033 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-16 04:54:49.035 +00:00 [INF] Hosting environment: Development
+2023-02-16 04:54:49.036 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-16 04:54:49.036 +00:00 [DBG] Hosting started
+2023-02-16 04:54:49.387 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 04:54:49.387 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 04:54:49.388 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:49.393 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:49.397 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:49.401 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 04:54:49.403 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:51.017 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 04:54:51.019 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 04:54:51.021 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:51.025 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:51.028 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:51.031 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 04:54:51.031 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:53.669 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 04:54:53.670 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 04:54:53.671 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:53.672 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:53.675 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:53.678 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 04:54:53.679 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:58.429 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 04:54:58.429 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 04:54:58.430 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:54:58.431 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:58.435 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:54:58.439 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 04:54:58.439 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:55:05.400 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 04:55:05.400 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 04:55:05.401 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:55:05.402 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:55:05.406 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:55:05.409 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 04:55:05.410 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:55:17.791 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 04:55:17.792 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 04:55:17.792 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:55:17.794 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:55:17.796 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 04:55:17.798 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 04:55:17.799 +00:00 [DBG] Channel picker updated.
+2023-02-16 04:55:27.093 +00:00 [INF] Application is shutting down...
+2023-02-16 04:55:27.096 +00:00 [DBG] Hosting stopping
+2023-02-16 04:55:27.121 +00:00 [DBG] Hosting stopped
+2023-02-16 05:18:21.994 +00:00 [DBG] Hosting starting
+2023-02-16 05:18:22.469 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"http://192.168.12.41:1234/ICNC.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-16 05:18:22.544 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:1234
+2023-02-16 05:18:22.561 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:22.575 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-16 05:18:22.588 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:18:22.652 +00:00 [DBG] Picked queued.
+2023-02-16 05:18:22.680 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:22.725 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:22.736 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:18:22.736 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:22.759 +00:00 [DBG] Picked failure with status: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+2023-02-16 05:18:22.774 +00:00 [ERR] Error starting gRPC call.
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-16 05:18:22.793 +00:00 [INF] Call failed with gRPC error status. Status code: '"Unavailable"', Message: 'Error connecting to subchannel.'.
+2023-02-16 05:18:22.796 +00:00 [DBG] Finished gRPC call.
+2023-02-16 05:18:22.805 +00:00 [DBG] gRPC call canceled.
+2023-02-16 05:18:22.818 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.Rpi.Worker.StartAsync(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 30
+   at ICNC.Rpi.Worker.StartAsync(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 30
+2023-02-16 05:18:22.979 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-16 05:18:23.164 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-16 05:18:23.165 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-16 05:18:23.167 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-16 05:18:23.169 +00:00 [INF] Hosting environment: Development
+2023-02-16 05:18:23.170 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-16 05:18:23.170 +00:00 [DBG] Hosting started
+2023-02-16 05:18:23.701 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:18:23.702 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:18:23.703 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:23.706 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:23.710 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:23.714 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:18:23.714 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:25.343 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:18:25.344 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:18:25.345 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:25.346 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:25.349 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:25.352 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:18:25.353 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:28.186 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:18:28.186 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:18:28.187 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:28.188 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:28.191 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:28.194 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:18:28.195 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:32.348 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:18:32.349 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:18:32.349 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:32.351 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:32.354 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:18:32.357 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:18:32.358 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:18:35.192 +00:00 [INF] Application is shutting down...
+2023-02-16 05:18:35.207 +00:00 [DBG] Hosting stopping
+2023-02-16 05:18:35.264 +00:00 [DBG] Hosting stopped
+2023-02-16 05:35:35.910 +00:00 [DBG] Hosting starting
+2023-02-16 05:35:36.406 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-16 05:35:36.611 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-16 05:35:36.611 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-16 05:35:36.613 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-16 05:35:36.614 +00:00 [INF] Hosting environment: Development
+2023-02-16 05:35:36.615 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-16 05:35:36.616 +00:00 [DBG] Hosting started
+2023-02-16 05:35:50.136 +00:00 [INF] Application is shutting down...
+2023-02-16 05:35:50.145 +00:00 [DBG] Hosting stopping
+2023-02-16 05:35:50.222 +00:00 [DBG] Hosting stopped
+2023-02-16 05:40:18.351 +00:00 [DBG] Hosting starting
+2023-02-16 05:40:18.819 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"http://192.168.12.41:1234/ICNC.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-16 05:40:18.893 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:1234
+2023-02-16 05:40:18.910 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:18.924 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-16 05:40:18.937 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:40:19.000 +00:00 [DBG] Picked queued.
+2023-02-16 05:40:19.034 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:19.077 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:19.083 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:40:19.084 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:19.099 +00:00 [DBG] Picked failure with status: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+2023-02-16 05:40:19.112 +00:00 [ERR] Error starting gRPC call.
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-16 05:40:19.128 +00:00 [INF] Call failed with gRPC error status. Status code: '"Unavailable"', Message: 'Error connecting to subchannel.'.
+2023-02-16 05:40:19.130 +00:00 [DBG] Finished gRPC call.
+2023-02-16 05:40:19.137 +00:00 [DBG] gRPC call canceled.
+2023-02-16 05:40:19.149 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.Rpi.Worker.DoWork(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 37
+   at ICNC.Rpi.Worker.DoWork(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 37
+2023-02-16 05:40:19.304 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-16 05:40:19.500 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-16 05:40:19.501 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-16 05:40:19.502 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-16 05:40:19.504 +00:00 [INF] Hosting environment: Development
+2023-02-16 05:40:19.505 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-16 05:40:19.505 +00:00 [DBG] Hosting started
+2023-02-16 05:40:19.934 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:40:19.934 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:40:19.935 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:19.939 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:19.944 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:19.948 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:40:19.949 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:21.315 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:40:21.315 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:40:21.324 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:21.326 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:21.329 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:21.332 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:40:21.332 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:24.377 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:40:24.378 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:40:24.378 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:24.380 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:24.382 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:24.385 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:40:24.385 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:28.622 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:40:28.622 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:40:28.622 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:28.624 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:28.627 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:28.630 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:40:28.630 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:34.886 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:40:34.887 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:40:34.889 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:34.890 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:34.893 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:34.896 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:40:34.897 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:45.023 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:40:45.025 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:40:45.030 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:45.033 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:45.037 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:40:45.040 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:40:45.041 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:40:56.727 +00:00 [INF] Application is shutting down...
+2023-02-16 05:40:56.735 +00:00 [DBG] Hosting stopping
+2023-02-16 05:40:56.786 +00:00 [DBG] Hosting stopped
+2023-02-16 05:57:20.424 +00:00 [DBG] Hosting starting
+2023-02-16 05:57:21.082 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"http://192.168.12.41:1234/ICNC.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-16 05:57:21.196 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:1234
+2023-02-16 05:57:21.222 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:21.251 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-16 05:57:21.275 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:57:21.383 +00:00 [DBG] Picked queued.
+2023-02-16 05:57:21.481 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:21.541 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:21.555 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:57:21.559 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:21.583 +00:00 [DBG] Picked failure with status: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+2023-02-16 05:57:21.601 +00:00 [ERR] Error starting gRPC call.
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-16 05:57:21.631 +00:00 [INF] Call failed with gRPC error status. Status code: '"Unavailable"', Message: 'Error connecting to subchannel.'.
+2023-02-16 05:57:21.633 +00:00 [DBG] Finished gRPC call.
+2023-02-16 05:57:21.646 +00:00 [DBG] gRPC call canceled.
+2023-02-16 05:57:21.664 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.Rpi.Worker.DoWork(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 37
+   at ICNC.Rpi.Worker.DoWork(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 37
+2023-02-16 05:57:21.907 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-16 05:57:22.201 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-16 05:57:22.204 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-16 05:57:22.208 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-16 05:57:22.212 +00:00 [INF] Hosting environment: Development
+2023-02-16 05:57:22.215 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-16 05:57:22.218 +00:00 [DBG] Hosting started
+2023-02-16 05:57:22.398 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:57:22.398 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:57:22.399 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:22.405 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:22.410 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:22.421 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:57:22.424 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:24.227 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:57:24.228 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:57:24.229 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:24.231 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:24.242 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:24.247 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:57:24.247 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:26.790 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:57:26.791 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:57:26.791 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:26.793 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:26.797 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:26.800 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:57:26.802 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:30.132 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:57:30.133 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:57:30.133 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:30.135 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:30.140 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:30.151 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:57:30.152 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:37.258 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:57:37.258 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:57:37.259 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:37.262 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:37.267 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:37.273 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:57:37.274 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:47.637 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:57:47.638 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:57:47.639 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:57:47.643 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:47.648 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:57:47.652 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:57:47.652 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:58:02.550 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:58:02.551 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:58:02.552 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:58:02.554 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:58:02.559 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:58:02.562 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:58:02.563 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:58:24.524 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 05:58:24.525 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 05:58:24.525 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:58:24.527 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:58:24.532 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 05:58:24.536 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 05:58:24.537 +00:00 [DBG] Channel picker updated.
+2023-02-16 05:58:25.343 +00:00 [INF] Application is shutting down...
+2023-02-16 05:58:25.349 +00:00 [DBG] Hosting stopping
+2023-02-16 05:58:25.382 +00:00 [DBG] Hosting stopped
+2023-02-16 06:14:29.427 +00:00 [DBG] Hosting starting
+2023-02-16 06:14:29.801 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-16 06:14:30.053 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-16 06:14:30.053 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-16 06:14:30.055 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-16 06:14:30.057 +00:00 [INF] Hosting environment: Development
+2023-02-16 06:14:30.057 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-16 06:14:30.058 +00:00 [DBG] Hosting started
+2023-02-16 06:17:49.720 +00:00 [INF] Application is shutting down...
+2023-02-16 06:17:49.728 +00:00 [DBG] Hosting stopping
+2023-02-16 06:17:49.788 +00:00 [DBG] Hosting stopped
+2023-02-16 06:18:22.095 +00:00 [DBG] Hosting starting
+2023-02-16 06:18:22.449 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-16 06:18:22.701 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-16 06:18:22.701 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-16 06:18:22.703 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-16 06:18:22.704 +00:00 [INF] Hosting environment: Development
+2023-02-16 06:18:22.705 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-16 06:18:22.706 +00:00 [DBG] Hosting started
+2023-02-16 06:27:48.308 +00:00 [DBG] Connection id "0HMOFSRM3GKTJ" accepted.
+2023-02-16 06:27:48.316 +00:00 [DBG] Connection id "0HMOFSRM3GKTJ" started.
+2023-02-16 06:27:48.325 +00:00 [DBG] Connection id "0HMOFSRM3GKTK" accepted.
+2023-02-16 06:27:48.327 +00:00 [DBG] Connection id "0HMOFSRM3GKTK" started.
+2023-02-16 06:27:48.472 +00:00 [INF] Request starting HTTP/1.1 GET http://192.168.14.56:5100/swagger/index.html - -
+2023-02-16 06:27:48.484 +00:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-02-16 06:27:48.850 +00:00 [DBG] Connection id "0HMOFSRM3GKTK" completed keep alive response.
+2023-02-16 06:27:48.857 +00:00 [INF] Request finished HTTP/1.1 GET http://192.168.14.56:5100/swagger/index.html - - - 200 - text/html;charset=utf-8 390.6165ms
+2023-02-16 06:27:49.074 +00:00 [INF] Request starting HTTP/1.1 GET http://192.168.14.56:5100/swagger/v1/swagger.json - -
+2023-02-16 06:27:49.372 +00:00 [DBG] Connection id "0HMOFSRM3GKTK" completed keep alive response.
+2023-02-16 06:27:49.374 +00:00 [INF] Request finished HTTP/1.1 GET http://192.168.14.56:5100/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 299.5624ms
+2023-02-16 06:27:53.343 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.14.56:5100/QR application/json 63
+2023-02-16 06:27:53.351 +00:00 [DBG] POST requests are not supported
+2023-02-16 06:27:53.488 +00:00 [DBG] 1 candidate(s) found for the request path '/QR'
+2023-02-16 06:27:53.498 +00:00 [DBG] Endpoint 'QR.Api.Controllers.QRController.Print (QR.Api)' with route pattern 'QR' is valid for the request path '/QR'
+2023-02-16 06:27:53.500 +00:00 [DBG] Request matched endpoint 'QR.Api.Controllers.QRController.Print (QR.Api)'
+2023-02-16 06:27:53.510 +00:00 [INF] Executing endpoint 'QR.Api.Controllers.QRController.Print (QR.Api)'
+2023-02-16 06:27:53.587 +00:00 [INF] Route matched with {action = "Print", controller = "QR"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Print(QR.Api.PrintCmd) on controller QR.Api.Controllers.QRController (QR.Api).
+2023-02-16 06:27:53.595 +00:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-02-16 06:27:53.597 +00:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+2023-02-16 06:27:53.598 +00:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-02-16 06:27:53.599 +00:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-02-16 06:27:53.600 +00:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-02-16 06:27:53.608 +00:00 [DBG] Executing controller factory for controller QR.Api.Controllers.QRController (QR.Api)
+2023-02-16 06:27:53.721 +00:00 [DBG] Executed controller factory for controller QR.Api.Controllers.QRController (QR.Api)
+2023-02-16 06:27:53.735 +00:00 [DBG] Attempting to bind parameter 'cmd' of type 'QR.Api.PrintCmd' ...
+2023-02-16 06:27:53.742 +00:00 [DBG] Attempting to bind parameter 'cmd' of type 'QR.Api.PrintCmd' using the name '' in request data ...
+2023-02-16 06:27:53.745 +00:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-02-16 06:27:53.768 +00:00 [DBG] Connection id "0HMOFSRM3GKTK", Request id "0HMOFSRM3GKTK:00000003": started reading request body.
+2023-02-16 06:27:53.769 +00:00 [DBG] Connection id "0HMOFSRM3GKTK", Request id "0HMOFSRM3GKTK:00000003": done reading request body.
+2023-02-16 06:27:53.800 +00:00 [DBG] JSON input formatter succeeded, deserializing to type 'QR.Api.PrintCmd'
+2023-02-16 06:27:53.801 +00:00 [DBG] Done attempting to bind parameter 'cmd' of type 'QR.Api.PrintCmd'.
+2023-02-16 06:27:53.802 +00:00 [DBG] Done attempting to bind parameter 'cmd' of type 'QR.Api.PrintCmd'.
+2023-02-16 06:27:53.803 +00:00 [DBG] Attempting to validate the bound parameter 'cmd' of type 'QR.Api.PrintCmd' ...
+2023-02-16 06:27:53.816 +00:00 [DBG] Done attempting to validate the bound parameter 'cmd' of type 'QR.Api.PrintCmd'.
+2023-02-16 06:27:53.913 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"http://192.168.12.41:1234/ICNC.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-16 06:27:53.965 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:1234
+2023-02-16 06:27:53.979 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:27:53.993 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-16 06:27:54.005 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:27:54.048 +00:00 [DBG] Picked queued.
+2023-02-16 06:27:54.064 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:27:54.106 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:27:54.118 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:27:54.120 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:27:54.139 +00:00 [DBG] Picked failure with status: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+2023-02-16 06:27:54.157 +00:00 [ERR] Error starting gRPC call.
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-16 06:27:54.180 +00:00 [INF] Call failed with gRPC error status. Status code: '"Unavailable"', Message: 'Error connecting to subchannel.'.
+2023-02-16 06:27:54.183 +00:00 [DBG] Finished gRPC call.
+2023-02-16 06:27:54.193 +00:00 [DBG] gRPC call canceled.
+2023-02-16 06:27:54.205 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 33
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 33
+2023-02-16 06:27:54.239 +00:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-02-16 06:27:54.253 +00:00 [INF] Executed action QR.Api.Controllers.QRController.Print (QR.Api) in 642.7294ms
+2023-02-16 06:27:54.257 +00:00 [INF] Executed endpoint 'QR.Api.Controllers.QRController.Print (QR.Api)'
+2023-02-16 06:27:54.263 +00:00 [DBG] Connection id "0HMOFSRM3GKTK" completed keep alive response.
+2023-02-16 06:27:54.264 +00:00 [INF] Request finished HTTP/1.1 POST http://192.168.14.56:5100/QR application/json 63 - 200 0 - 920.9301ms
+2023-02-16 06:27:55.138 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:27:55.139 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:27:55.141 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:27:55.143 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:27:55.146 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:27:55.149 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:27:55.149 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:27:56.809 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:27:56.810 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:27:56.810 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:27:56.812 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:27:56.815 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:27:56.818 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:27:56.819 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:27:59.206 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:27:59.207 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:27:59.208 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:27:59.210 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:27:59.213 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:27:59.216 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:27:59.217 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:28:03.438 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:28:03.438 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:28:03.438 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:28:03.440 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:28:03.443 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:28:03.446 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:28:03.447 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:28:10.037 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:28:10.037 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:28:10.038 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:28:10.039 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:28:10.042 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:28:10.045 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:28:10.046 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:28:18.489 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:28:18.490 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:28:18.490 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:28:18.491 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:28:18.494 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:28:18.498 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:28:18.498 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:28:37.849 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:28:37.850 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:28:37.850 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:28:37.858 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.CreateException(SocketError error, Boolean forAsyncThrow)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ConnectAsync(Socket socket)
+   at System.Net.Sockets.Socket.ConnectAsync(EndPoint remoteEP, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Subchannel.ConnectTransportAsync()
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.ExecutionContextCallback(Object s)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext()
+   at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(IAsyncStateMachineBox box, Boolean allowInlining)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Threading.Tasks.Task`1.TrySetResult(TResult result)
+   at System.Threading.Tasks.Task.TwoTaskWhenAnyPromise`1.Invoke(Task completingTask)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Threading.Tasks.Task.TrySetResult()
+   at System.Threading.Tasks.Task.DelayPromise.CompleteTimedOut()
+   at System.Threading.TimerQueueTimer.Fire(Boolean isThreadPool)
+   at System.Threading.TimerQueue.FireNextTimers()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+--- End of stack trace from previous location ---
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:28:37.861 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.CreateException(SocketError error, Boolean forAsyncThrow)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ConnectAsync(Socket socket)
+   at System.Net.Sockets.Socket.ConnectAsync(EndPoint remoteEP, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Subchannel.ConnectTransportAsync()
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.ExecutionContextCallback(Object s)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext()
+   at System.Threading.Tasks.AwaitTaskContinuation.RunOrScheduleAction(IAsyncStateMachineBox box, Boolean allowInlining)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Threading.Tasks.Task`1.TrySetResult(TResult result)
+   at System.Threading.Tasks.Task.TwoTaskWhenAnyPromise`1.Invoke(Task completingTask)
+   at System.Threading.Tasks.Task.RunContinuations(Object continuationObject)
+   at System.Threading.Tasks.Task.TrySetResult()
+   at System.Threading.Tasks.Task.DelayPromise.CompleteTimedOut()
+   at System.Threading.TimerQueueTimer.Fire(Boolean isThreadPool)
+   at System.Threading.TimerQueue.FireNextTimers()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+--- End of stack trace from previous location ---
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:28:37.864 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:28:37.865 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:29:04.308 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:29:04.310 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:29:04.311 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:29:04.315 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:29:04.321 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:29:04.327 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:29:04.328 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:29:53.394 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:29:53.394 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:29:53.395 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:29:53.398 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:29:53.404 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:29:53.408 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:29:53.409 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:29:53.655 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client 'PrintCmdHandlerClient'
+2023-02-16 06:29:58.767 +00:00 [DBG] Connection id "0HMOFSRM3GKTJ" disconnecting.
+2023-02-16 06:29:58.776 +00:00 [DBG] Connection id "0HMOFSRM3GKTJ" stopped.
+2023-02-16 06:29:58.782 +00:00 [DBG] Connection id "0HMOFSRM3GKTJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-02-16 06:30:03.663 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:30:03.673 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.1044ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:30:04.764 +00:00 [DBG] Connection id "0HMOFSRM3GKTK" disconnecting.
+2023-02-16 06:30:04.764 +00:00 [DBG] Connection id "0HMOFSRM3GKTK" stopped.
+2023-02-16 06:30:04.765 +00:00 [DBG] Connection id "0HMOFSRM3GKTK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-02-16 06:30:13.673 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:30:13.674 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.011ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:30:23.675 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:30:23.675 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.005ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:30:33.673 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:30:33.673 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0056ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:30:43.674 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:30:43.675 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.006ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:30:49.000 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:30:49.001 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:30:49.001 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:30:49.003 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:30:49.006 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:30:49.009 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:30:49.009 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:30:53.674 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:30:53.675 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.004ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:31:03.677 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:31:03.678 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0059ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:31:13.680 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:31:13.681 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0074ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:31:23.682 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:31:23.684 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0055ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:31:33.688 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:31:33.689 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.022ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:31:43.690 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:31:43.691 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.007ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:31:53.693 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:31:53.694 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0199ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:32:03.695 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:32:03.696 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0071ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:32:13.697 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:32:13.697 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:32:23.700 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:32:23.700 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0084ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:32:31.085 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:32:31.086 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:32:31.086 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:32:31.089 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:32:31.095 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:32:31.100 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:32:31.102 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:32:33.701 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:32:33.701 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0055ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:32:43.702 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-16 06:32:43.703 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0071ms - processed: 0 items - remaining: 1 items
+2023-02-16 06:32:46.131 +00:00 [INF] Application is shutting down...
+2023-02-16 06:32:46.136 +00:00 [DBG] Hosting stopping
+2023-02-16 06:32:46.159 +00:00 [DBG] Hosting stopped
+2023-02-16 06:35:53.432 +00:00 [DBG] Hosting starting
+2023-02-16 06:35:53.883 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-16 06:35:54.202 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-16 06:35:54.204 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-16 06:35:54.206 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-16 06:35:54.209 +00:00 [INF] Hosting environment: Development
+2023-02-16 06:35:54.210 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-16 06:35:54.211 +00:00 [DBG] Hosting started
+2023-02-16 06:36:04.504 +00:00 [DBG] Connection id "0HMOFT09VJN0Q" accepted.
+2023-02-16 06:36:04.510 +00:00 [DBG] Connection id "0HMOFT09VJN0Q" started.
+2023-02-16 06:36:04.650 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.14.56:5100/QR application/json 63
+2023-02-16 06:36:04.661 +00:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-02-16 06:36:04.708 +00:00 [DBG] POST requests are not supported
+2023-02-16 06:36:04.799 +00:00 [DBG] 1 candidate(s) found for the request path '/QR'
+2023-02-16 06:36:04.808 +00:00 [DBG] Endpoint 'QR.Api.Controllers.QRController.Print (QR.Api)' with route pattern 'QR' is valid for the request path '/QR'
+2023-02-16 06:36:04.810 +00:00 [DBG] Request matched endpoint 'QR.Api.Controllers.QRController.Print (QR.Api)'
+2023-02-16 06:36:04.819 +00:00 [INF] Executing endpoint 'QR.Api.Controllers.QRController.Print (QR.Api)'
+2023-02-16 06:36:04.900 +00:00 [INF] Route matched with {action = "Print", controller = "QR"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Print(QR.Api.PrintCmd) on controller QR.Api.Controllers.QRController (QR.Api).
+2023-02-16 06:36:04.910 +00:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-02-16 06:36:04.911 +00:00 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+2023-02-16 06:36:04.913 +00:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-02-16 06:36:04.914 +00:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-02-16 06:36:04.915 +00:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-02-16 06:36:04.926 +00:00 [DBG] Executing controller factory for controller QR.Api.Controllers.QRController (QR.Api)
+2023-02-16 06:36:05.047 +00:00 [DBG] Executed controller factory for controller QR.Api.Controllers.QRController (QR.Api)
+2023-02-16 06:36:05.063 +00:00 [DBG] Attempting to bind parameter 'cmd' of type 'QR.Api.PrintCmd' ...
+2023-02-16 06:36:05.071 +00:00 [DBG] Attempting to bind parameter 'cmd' of type 'QR.Api.PrintCmd' using the name '' in request data ...
+2023-02-16 06:36:05.074 +00:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-02-16 06:36:05.173 +00:00 [DBG] Connection id "0HMOFT09VJN0Q", Request id "0HMOFT09VJN0Q:00000001": started reading request body.
+2023-02-16 06:36:05.174 +00:00 [DBG] Connection id "0HMOFT09VJN0Q", Request id "0HMOFT09VJN0Q:00000001": done reading request body.
+2023-02-16 06:36:05.205 +00:00 [DBG] JSON input formatter succeeded, deserializing to type 'QR.Api.PrintCmd'
+2023-02-16 06:36:05.207 +00:00 [DBG] Done attempting to bind parameter 'cmd' of type 'QR.Api.PrintCmd'.
+2023-02-16 06:36:05.207 +00:00 [DBG] Done attempting to bind parameter 'cmd' of type 'QR.Api.PrintCmd'.
+2023-02-16 06:36:05.208 +00:00 [DBG] Attempting to validate the bound parameter 'cmd' of type 'QR.Api.PrintCmd' ...
+2023-02-16 06:36:05.224 +00:00 [DBG] Done attempting to validate the bound parameter 'cmd' of type 'QR.Api.PrintCmd'.
+2023-02-16 06:36:05.320 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"http://192.168.12.41:1234/ICNC.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-16 06:36:05.372 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:1234
+2023-02-16 06:36:05.386 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:05.400 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-16 06:36:05.412 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:36:05.454 +00:00 [DBG] Picked queued.
+2023-02-16 06:36:05.470 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:05.509 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:05.514 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:36:05.515 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:05.541 +00:00 [DBG] Picked failure with status: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+2023-02-16 06:36:05.558 +00:00 [ERR] Error starting gRPC call.
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Balancer.Internal.ConnectionManager.PickAsync(PickContext context, Boolean waitForReady, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-16 06:36:05.587 +00:00 [INF] Call failed with gRPC error status. Status code: '"Unavailable"', Message: 'Error connecting to subchannel.'.
+2023-02-16 06:36:05.589 +00:00 [DBG] Finished gRPC call.
+2023-02-16 06:36:05.601 +00:00 [DBG] gRPC call canceled.
+2023-02-16 06:36:05.615 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 33
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 33
+2023-02-16 06:36:05.650 +00:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-02-16 06:36:05.663 +00:00 [INF] Executed action QR.Api.Controllers.QRController.Print (QR.Api) in 738.3552ms
+2023-02-16 06:36:05.667 +00:00 [INF] Executed endpoint 'QR.Api.Controllers.QRController.Print (QR.Api)'
+2023-02-16 06:36:05.680 +00:00 [DBG] Connection id "0HMOFT09VJN0Q" completed keep alive response.
+2023-02-16 06:36:05.685 +00:00 [INF] Request finished HTTP/1.1 POST http://192.168.14.56:5100/QR application/json 63 - 200 0 - 1041.7432ms
+2023-02-16 06:36:06.670 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:36:06.671 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:36:06.671 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:06.674 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:06.676 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:06.679 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:36:06.680 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:08.505 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:36:08.506 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:36:08.506 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:08.508 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:08.510 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:08.513 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:36:08.513 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:10.890 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:36:10.891 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:36:10.891 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:10.893 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:10.898 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:10.904 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:36:10.904 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:15.053 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:36:15.054 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:36:15.054 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:15.055 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:15.058 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:15.061 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:36:15.062 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:21.195 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:36:21.196 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:36:21.197 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:21.200 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:21.204 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:21.209 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:36:21.210 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:31.242 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:36:31.243 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:36:31.243 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:31.247 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:31.252 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:31.257 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:36:31.257 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:44.885 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:36:44.886 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:36:44.887 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:36:44.890 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:44.894 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:36:44.900 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:36:44.902 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:37:10.998 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:37:10.999 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:37:10.999 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:37:11.002 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:37:11.017 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:37:11.025 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:37:11.025 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:37:51.662 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connecting to socket.'.
+2023-02-16 06:37:51.663 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-16 06:37:51.664 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:37:51.667 +00:00 [DBG] Subchannel id '1' error connecting to socket 192.168.12.41:1234.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:37:51.671 +00:00 [DBG] Subchannel id '1' state changed to "TransientFailure". Detail: 'Error connecting to subchannel.'.
+System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(CancellationToken cancellationToken)
+2023-02-16 06:37:51.676 +00:00 [DBG] Channel state updated to "TransientFailure".
+2023-02-16 06:37:51.677 +00:00 [DBG] Channel picker updated.
+2023-02-16 06:37:57.741 +00:00 [INF] Application is shutting down...
+2023-02-16 06:37:57.745 +00:00 [DBG] Hosting stopping
+2023-02-16 06:37:57.763 +00:00 [DBG] Connection id "0HMOFT09VJN0Q" disconnecting.
+2023-02-16 06:37:57.772 +00:00 [DBG] Connection id "0HMOFT09VJN0Q" stopped.
+2023-02-16 06:37:57.782 +00:00 [DBG] Connection id "0HMOFT09VJN0Q" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-02-16 06:37:57.809 +00:00 [DBG] Hosting stopped

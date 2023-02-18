@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package ICNC.ERP.Rpi;
+option csharp_namespace = "ICNC.ERP.Rpi";
+
+message PrintMessage{
+    string FileName=1;
+    string Bucket=2;
+    int32 Times=3;
+};

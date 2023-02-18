@@ -1,0 +1,33 @@
+2023-02-14 07:42:47.062 +00:00 [DBG] Hosting starting
+2023-02-14 07:42:47.515 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-14 07:42:47.791 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-14 07:42:47.793 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-14 07:42:47.795 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-14 07:42:47.798 +00:00 [INF] Hosting environment: Development
+2023-02-14 07:42:47.799 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-14 07:42:47.801 +00:00 [DBG] Hosting started
+2023-02-14 07:49:36.246 +00:00 [DBG] Connection id "0HMOEC02C1GS3" accepted.
+2023-02-14 07:49:36.250 +00:00 [DBG] Connection id "0HMOEC02C1GS3" started.
+2023-02-14 07:49:36.788 +00:00 [DBG] Connection id "0HMOEC02C1GS3" bad request data: "Invalid request line: 'SSH-2.0-OpenSSH_for_Windows_8.1\x0D'"
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Invalid request line: 'SSH-2.0-OpenSSH_for_Windows_8.1\x0D'
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.GetUnknownMethodLength(ReadOnlySpan`1 span)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, ReadOnlySpan`1 requestLine)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpParser`1.ParseRequestLine(TRequestHandler handler, SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.ParseRequest(SequenceReader`1& reader)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1Connection.TryParseRequest(ReadResult result, Boolean& endConnection)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequestsAsync[TContext](IHttpApplication`1 application)
+2023-02-14 07:49:36.856 +00:00 [DBG] Connection id "0HMOEC02C1GS3" disconnecting.
+2023-02-14 07:49:36.863 +00:00 [DBG] Connection id "0HMOEC02C1GS3" stopped.
+2023-02-14 07:49:36.867 +00:00 [DBG] Connection id "0HMOEC02C1GS3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-02-14 07:50:40.993 +00:00 [INF] Application is shutting down...
+2023-02-14 07:50:40.999 +00:00 [DBG] Hosting stopping
+2023-02-14 07:50:41.040 +00:00 [DBG] Hosting stopped
+2023-02-14 13:10:14.749 +00:00 [DBG] Hosting starting
+2023-02-14 13:10:15.224 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-14 13:10:15.560 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-14 13:10:15.562 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-14 13:10:15.563 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-14 13:10:15.565 +00:00 [INF] Hosting environment: Development
+2023-02-14 13:10:15.565 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-14 13:10:15.566 +00:00 [DBG] Hosting started

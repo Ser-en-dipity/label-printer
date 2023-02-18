@@ -1,0 +1,29 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
+WORKDIR /App
+
+# Copy everything
+COPY . ./
+
+WORKDIR /App/ICNC.ERP.Rpi
+
+ENV http_proxy http://proxy.cohort-study.com:43890
+ENV https_proxy http://proxy.cohort-study.com:43890
+
+WORKDIR /App
+# Restore as distinct layers
+RUN dotnet restore
+# Build and publish a release
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
+ARG DEBIAN_FRONTEND=noninteractive
+RUN  apt-get update -o  Acquire::http::proxy="http://proxy.cohort-study.com:43890"
+RUN  apt-get install -yq libgdiplus -o Acquire::http::proxy="http://proxy.cohort-study.com:43890"
+
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+WORKDIR /App
+COPY --from=build-env /App/out .
+ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]

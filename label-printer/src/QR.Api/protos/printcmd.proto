@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package ICNC.ERP.Rpi;
+option csharp_namespace = "ICNC.ERP.Rpi";
+
+import "google/protobuf/empty.proto";
+import "printcmd_msg.proto";
+
+service PrintCmdHandler {
+    rpc PrintLabel(google.protobuf.Empty) returns (stream PrintMessage) {}
+    
+}

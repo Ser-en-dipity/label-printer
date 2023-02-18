@@ -1,0 +1,294 @@
+2023-02-17 11:42:39.220 +00:00 [DBG] Hosting starting
+2023-02-17 11:44:04.668 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 11:44:23.934 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. IOException:  Received an unexpected EOF or 0 bytes from the transport stream.", DebugException="System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 52
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 52
+2023-02-17 11:44:48.824 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 11:44:49.357 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 11:44:50.256 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 11:44:51.219 +00:00 [INF] Hosting environment: Development
+2023-02-17 11:44:51.470 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 11:44:51.566 +00:00 [DBG] Hosting started
+2023-02-17 11:44:56.649 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client 'PrintCmdHandlerClient'
+2023-02-17 11:45:07.705 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 11:45:07.790 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.3074ms - processed: 0 items - remaining: 1 items
+2023-02-17 11:45:17.877 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 11:45:17.986 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 8.8245ms - processed: 0 items - remaining: 1 items
+2023-02-17 11:45:28.110 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 11:45:28.215 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.036ms - processed: 0 items - remaining: 1 items
+2023-02-17 11:45:38.274 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 11:45:38.373 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0272ms - processed: 0 items - remaining: 1 items
+2023-02-17 11:45:48.433 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 11:45:48.506 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0282ms - processed: 0 items - remaining: 1 items
+2023-02-17 11:45:56.410 +00:00 [INF] Application is shutting down...
+2023-02-17 11:45:56.650 +00:00 [DBG] Hosting stopping
+2023-02-17 11:45:57.325 +00:00 [DBG] Hosting stopped
+2023-02-17 11:48:29.448 +00:00 [DBG] Hosting starting
+2023-02-17 11:48:32.276 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 11:48:33.842 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 11:48:33.857 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 11:48:33.879 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 11:48:33.892 +00:00 [INF] Hosting environment: Development
+2023-02-17 11:48:33.894 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 11:48:33.896 +00:00 [DBG] Hosting started
+2023-02-17 11:48:34.578 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unimplemented", Detail="Service is unimplemented.")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 52
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 52
+2023-02-17 11:49:44.726 +00:00 [INF] Application is shutting down...
+2023-02-17 11:49:44.726 +00:00 [DBG] Hosting stopping
+2023-02-17 11:49:44.970 +00:00 [DBG] Hosting stopped
+2023-02-17 12:06:14.862 +00:00 [DBG] Hosting starting
+2023-02-17 12:06:15.965 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 12:06:16.281 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 12:06:16.283 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 12:06:16.287 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 12:06:16.292 +00:00 [INF] Hosting environment: Development
+2023-02-17 12:06:16.293 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 12:06:16.296 +00:00 [DBG] Hosting started
+2023-02-17 12:06:16.399 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unimplemented", Detail="Service is unimplemented.")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 52
+   at ICNC.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 52
+2023-02-17 12:07:57.485 +00:00 [INF] Application is shutting down...
+2023-02-17 12:07:57.490 +00:00 [DBG] Hosting stopping
+2023-02-17 12:07:57.528 +00:00 [DBG] Hosting stopped
+2023-02-17 12:10:53.493 +00:00 [DBG] Hosting starting
+2023-02-17 12:10:55.145 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 12:10:55.218 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 12:10:55.412 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 12:10:55.415 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 12:10:55.417 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 12:10:55.419 +00:00 [INF] Hosting environment: Development
+2023-02-17 12:10:55.421 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 12:10:55.423 +00:00 [DBG] Hosting started
+2023-02-17 12:10:56.278 +00:00 [INF] ********************batch-labels00f3e73b-64b6-43fa-ba4f-beb38ee5e375.pdf
+2023-02-17 12:10:56.418 +00:00 [ERR] BackgroundService failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ICNC.ERP.Rpi.Worker.get_Client() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 23
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 54
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 52
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2023-02-17 12:10:56.586 +00:00 [FTL] The HostOptions.BackgroundServiceExceptionBehavior is configured to StopHost. A BackgroundService has thrown an unhandled exception, and the IHost instance is stopping. To avoid this behavior, configure this to Ignore; however the BackgroundService will not be restarted.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ICNC.ERP.Rpi.Worker.get_Client() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 23
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 54
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 52
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/erp/rpi/label-printer/src/QR.Api/Work.cs:line 34
+   at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+2023-02-17 12:10:56.595 +00:00 [DBG] Hosting stopping
+2023-02-17 12:10:56.597 +00:00 [INF] Application is shutting down...
+2023-02-17 12:10:56.683 +00:00 [DBG] Hosting stopped
+2023-02-17 12:15:57.229 +00:00 [DBG] Hosting starting
+2023-02-17 12:15:59.991 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 12:16:00.148 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 12:16:01.637 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 12:16:01.660 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 12:16:01.694 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 12:16:01.698 +00:00 [INF] Hosting environment: Development
+2023-02-17 12:16:01.699 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 12:16:01.701 +00:00 [DBG] Hosting started
+2023-02-17 12:16:12.626 +00:00 [INF] ********************batch-labels076a8e5c-04b7-4559-995c-d948aac873fe.pdf
+2023-02-17 12:16:16.478 +00:00 [INF] request id is GODEX_G500-11 (1 file(s))
+2023-02-17 12:17:57.899 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client 'PrintCmdHandlerClient'
+2023-02-17 12:18:07.969 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:18:07.991 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.3323ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:18:17.995 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:18:17.998 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0361ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:18:28.003 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:18:28.004 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0058ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:18:38.005 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:18:38.007 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0082ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:18:48.008 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:18:48.012 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0056ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:18:58.013 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:18:58.014 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:19:08.016 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:19:08.017 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0195ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:19:10.073 +00:00 [INF] Application is shutting down...
+2023-02-17 12:19:10.084 +00:00 [DBG] Hosting stopping
+2023-02-17 12:19:10.271 +00:00 [DBG] Hosting stopped
+2023-02-17 12:36:35.791 +00:00 [DBG] Hosting starting
+2023-02-17 12:36:37.255 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 12:36:37.327 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 12:36:37.538 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 12:36:37.540 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 12:36:37.542 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 12:36:37.544 +00:00 [INF] Hosting environment: Development
+2023-02-17 12:36:37.546 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 12:36:37.548 +00:00 [DBG] Hosting started
+2023-02-17 12:36:38.448 +00:00 [INF] ********************batch-labels0391edad-0ab0-4ddd-8b56-f2f023eef5eb.pdf{DateTime.Now}
+2023-02-17 12:36:40.849 +00:00 [INF] request id is GODEX_G500-12 (1 file(s))
+2023-02-17 12:38:36.285 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client 'PrintCmdHandlerClient'
+2023-02-17 12:38:46.331 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:38:46.347 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.7721ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:38:56.351 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:38:56.353 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0382ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:39:06.355 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:39:06.356 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.007ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:39:16.358 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:39:16.359 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0058ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:39:26.364 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:39:26.364 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0057ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:39:36.365 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:39:36.369 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0165ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:39:46.371 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:39:46.372 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0074ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:39:56.375 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:39:56.375 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0072ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:40:06.377 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:40:06.378 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0084ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:40:16.380 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:40:16.380 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0058ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:40:26.382 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:40:26.382 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0082ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:40:36.384 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:40:36.384 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0058ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:40:46.386 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:40:46.386 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.008ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:40:56.391 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:40:56.397 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0115ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:41:06.395 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:41:06.395 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0064ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:41:16.396 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:41:16.396 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0048ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:41:26.397 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:41:26.397 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0065ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:41:36.402 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:41:36.402 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:41:46.407 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:41:46.407 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0077ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:41:56.408 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:41:56.408 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0066ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:42:06.409 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:42:06.410 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0064ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:42:16.411 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:42:16.411 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0071ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:42:26.413 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:42:26.413 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0075ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:42:36.415 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:42:36.415 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0059ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:42:46.416 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:42:46.416 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0067ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:42:56.418 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:42:56.418 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:43:06.419 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:43:06.420 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0071ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:43:16.421 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:43:16.421 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0061ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:43:26.423 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:43:26.423 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0056ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:43:36.424 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-17 12:43:36.425 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0143ms - processed: 0 items - remaining: 1 items
+2023-02-17 12:43:44.346 +00:00 [INF] Application is shutting down...
+2023-02-17 12:43:44.349 +00:00 [DBG] Hosting stopping
+2023-02-17 12:43:44.524 +00:00 [DBG] Hosting stopped
+2023-02-17 12:44:10.209 +00:00 [DBG] Hosting starting
+2023-02-17 12:44:11.340 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 12:44:11.404 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 12:44:11.655 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 12:44:11.664 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 12:44:11.666 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 12:44:11.668 +00:00 [INF] Hosting environment: Development
+2023-02-17 12:44:11.670 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 12:44:11.671 +00:00 [DBG] Hosting started
+2023-02-17 12:44:12.077 +00:00 [INF] ********************batch-labels00f3e73b-64b6-43fa-ba4f-beb38ee5e375.pdf
+2023-02-17 12:44:13.543 +00:00 [INF] request id is GODEX_G500-13 (1 file(s))
+2023-02-17 12:46:27.878 +00:00 [INF] Application is shutting down...
+2023-02-17 12:46:27.878 +00:00 [DBG] Hosting stopping
+2023-02-17 12:46:28.045 +00:00 [DBG] Hosting stopped
+2023-02-17 12:46:53.938 +00:00 [DBG] Hosting starting
+2023-02-17 12:46:55.167 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 12:46:55.230 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 12:46:55.464 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 12:46:55.466 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 12:46:55.468 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 12:46:55.470 +00:00 [INF] Hosting environment: Development
+2023-02-17 12:46:55.471 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 12:46:55.473 +00:00 [DBG] Hosting started
+2023-02-17 12:46:55.890 +00:00 [INF] ********************batch-labels021c4ec1-51fd-4514-a12a-99c557b9268f.pdf
+2023-02-17 12:46:57.586 +00:00 [INF] request id is GODEX_G500-14 (1 file(s))
+2023-02-17 12:57:20.625 +00:00 [DBG] Hosting stopping
+2023-02-17 12:57:20.624 +00:00 [INF] Application is shutting down...
+2023-02-17 12:57:20.729 +00:00 [DBG] Hosting stopped
+2023-02-17 13:12:04.263 +00:00 [DBG] Hosting starting
+2023-02-17 13:12:05.802 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 13:12:05.885 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 13:12:06.200 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 13:12:06.211 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 13:12:06.216 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 13:12:06.221 +00:00 [INF] Hosting environment: Development
+2023-02-17 13:12:06.226 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 13:12:06.231 +00:00 [DBG] Hosting started
+2023-02-17 13:12:07.089 +00:00 [INF] ********************batch-labels021c4ec1-51fd-4514-a12a-99c557b9268f.pdf
+2023-02-17 13:12:09.157 +00:00 [INF] request id is GODEX_G500-15 (1 file(s))
+2023-02-17 13:13:05.225 +00:00 [DBG] Hosting stopping
+2023-02-17 13:13:05.225 +00:00 [INF] Application is shutting down...
+2023-02-17 13:13:05.473 +00:00 [DBG] Hosting stopped
+2023-02-17 13:13:20.306 +00:00 [DBG] Hosting starting
+2023-02-17 13:13:21.760 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 13:13:21.868 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 13:13:22.281 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 13:13:22.283 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 13:13:22.285 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 13:13:22.287 +00:00 [INF] Hosting environment: Development
+2023-02-17 13:13:22.288 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 13:13:22.290 +00:00 [DBG] Hosting started
+2023-02-17 13:13:23.089 +00:00 [INF] ********************batch-labels04cff58f-9198-4eb1-9bfa-a8ad50d5a7c9.pdf
+2023-02-17 13:13:25.429 +00:00 [INF] request id is GODEX_G500-16 (1 file(s))
+2023-02-17 13:24:29.267 +00:00 [INF] Application is shutting down...
+2023-02-17 13:24:29.267 +00:00 [DBG] Hosting stopping
+2023-02-17 13:24:29.419 +00:00 [DBG] Hosting stopped
+2023-02-17 13:28:42.167 +00:00 [DBG] Hosting starting
+2023-02-17 13:28:44.664 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 13:28:44.836 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 13:28:45.486 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 13:28:45.494 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 13:28:45.505 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 13:28:45.508 +00:00 [INF] Hosting environment: Development
+2023-02-17 13:28:45.508 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 13:28:45.512 +00:00 [DBG] Hosting started
+2023-02-17 13:28:53.255 +00:00 [INF] ********************batch-labels00f3e73b-64b6-43fa-ba4f-beb38ee5e375.pdf
+2023-02-17 13:28:56.437 +00:00 [INF] request id is GODEX_G500-17 (1 file(s))
+2023-02-17 13:29:47.905 +00:00 [INF] Application is shutting down...
+2023-02-17 13:29:47.905 +00:00 [DBG] Hosting stopping
+2023-02-17 13:29:48.124 +00:00 [DBG] Hosting stopped
+2023-02-17 14:01:56.780 +00:00 [DBG] Hosting starting
+2023-02-17 14:01:58.030 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-17 14:01:58.093 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-17 14:01:58.329 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-17 14:01:58.330 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-17 14:01:58.331 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-17 14:01:58.332 +00:00 [INF] Hosting environment: Development
+2023-02-17 14:01:58.333 +00:00 [INF] Content root path: /home/king/erp/rpi/label-printer/src/QR.Api
+2023-02-17 14:01:58.334 +00:00 [DBG] Hosting started
+2023-02-17 14:02:25.728 +00:00 [INF] ********************batch-labels00f3e73b-64b6-43fa-ba4f-beb38ee5e375.pdf
+2023-02-17 14:02:28.077 +00:00 [INF] request id is GODEX_G500-18 (1 file(s))
+2023-02-17 14:07:13.038 +00:00 [INF] Application is shutting down...
+2023-02-17 14:07:13.038 +00:00 [DBG] Hosting stopping
+2023-02-17 14:07:13.160 +00:00 [DBG] Hosting stopped
