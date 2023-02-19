@@ -21,7 +21,8 @@ jobs:
       with:
         dotnet-version: 7.0.x
     - name: Restore dependencies
-      run: dotnet restore --project ./label-printer/src/QR.Api.csproj
+      working-directory: ./label-printer/src/QR.Api
+      run: dotnet restore 
     - name: Build
       run: dotnet build --no-restore
     - name: Test
