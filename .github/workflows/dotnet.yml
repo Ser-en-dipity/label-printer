@@ -24,6 +24,8 @@ jobs:
       working-directory: ./label-printer/src/QR.Api
       run: dotnet restore 
     - name: Build
+      working-directory: ./label-printer/src/QR.Api
       run: dotnet build --no-restore
     - name: Test
+      working-directory: ./label-printer/src/QR.Api
       run: dotnet test --no-build --verbosity normal
