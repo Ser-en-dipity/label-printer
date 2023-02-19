@@ -1,0 +1,30 @@
+2023-02-19 21:39:19.531 +08:00 [DBG] Hosting starting
+2023-02-19 21:39:19.791 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-19 21:39:19.806 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-19 21:39:19.856 +08:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-19 21:39:19.856 +08:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-19 21:39:19.857 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-19 21:39:19.858 +08:00 [INF] Hosting environment: Development
+2023-02-19 21:39:19.858 +08:00 [INF] Content root path: /home/lsq/label-printer/label-printer/src/QR.Api
+2023-02-19 21:39:19.858 +08:00 [DBG] Hosting started
+2023-02-19 21:39:27.276 +08:00 [INF] Application is shutting down...
+2023-02-19 21:39:27.277 +08:00 [DBG] Hosting stopping
+2023-02-19 21:39:57.286 +08:00 [DBG] Hosting stopped
+2023-02-19 21:44:45.792 +08:00 [DBG] Hosting starting
+2023-02-19 21:44:46.001 +08:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-19 21:44:46.025 +08:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-19 21:44:46.030 +08:00 [DBG] Channel picker updated.
+2023-02-19 21:44:46.033 +08:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-19 21:44:46.036 +08:00 [DBG] Channel state updated to "Connecting".
+2023-02-19 21:44:46.051 +08:00 [DBG] Picked queued.
+2023-02-19 21:44:46.222 +08:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-19 21:44:46.242 +08:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-19 21:44:46.292 +08:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-19 21:44:46.292 +08:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-19 21:44:46.293 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-19 21:44:46.293 +08:00 [INF] Hosting environment: Development
+2023-02-19 21:44:46.294 +08:00 [INF] Content root path: /home/lsq/label-printer/label-printer/src/QR.Api
+2023-02-19 21:44:46.294 +08:00 [DBG] Hosting started
+2023-02-19 21:45:21.601 +08:00 [INF] Application is shutting down...
+2023-02-19 21:45:21.603 +08:00 [DBG] Hosting stopping
+2023-02-19 21:45:51.606 +08:00 [DBG] Hosting stopped

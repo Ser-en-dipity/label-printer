@@ -18,6 +18,7 @@ namespace ICNC.ERP.Rpi{
     public class Worker : BackgroundService  {
         private readonly ILogger<Worker> _logger;
         private readonly MinioOptions _minioOptions;
+        private readonly PrintCmdHandler.PrintCmdHandlerClient _grpcClient;
         public IConfiguration Configuration { get; }
 
         private MinioClient Client =>
@@ -26,10 +27,12 @@ namespace ICNC.ERP.Rpi{
                 .WithSSL();
         public Worker(ILogger<Worker> logger,
                    IConfiguration configuration,
-                   IOptions<MinioOptions> minioOptions){
+                   IOptions<MinioOptions> minioOptions,
+                   PrintCmdHandler.PrintCmdHandlerClient grpcClient){
             _logger = logger;
             Configuration = configuration;
             _minioOptions = minioOptions.Value;
+            _grpcClient = grpcClient;
         }
         protected  async override Task ExecuteAsync (CancellationToken cancellationToken){
             try{
@@ -45,18 +48,17 @@ namespace ICNC.ERP.Rpi{
         }
        
         public async Task DoWork(){
-            GrpcOption grpcOption =
-                Configuration.GetSection(GrpcOption.GRPC).Get<GrpcOption>();
-            HttpClientHandler clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-            using var channel = GrpcChannel.ForAddress(grpcOption.Endpoint, new GrpcChannelOptions
-            {
-                HttpHandler = clientHandler,
-                Credentials = new SslCredentials()
-            });
-            var client = new PrintCmdHandler.PrintCmdHandlerClient(channel);
             
-            using var streamingCall = client.PrintLabel(new Empty());
+            // HttpClientHandler clientHandler = new HttpClientHandler();
+            // clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            // using var channel = GrpcChannel.ForAddress(grpcOption.Endpoint, new GrpcChannelOptions
+            // {
+            //     HttpHandler = clientHandler,
+            //     Credentials = new SslCredentials()
+            // });
+            // var client = new PrintCmdHandler.PrintCmdHandlerClient(channel);
+            
+            using var streamingCall = _grpcClient.PrintLabel(new Empty());
                 await foreach (var cmd in streamingCall.ResponseStream.ReadAllAsync()){
                     _logger.LogInformation("********************" + cmd.Bucket + cmd.FileName );
                     if (!await Client.BucketExistsAsync(cmd.Bucket)) {
@@ -85,8 +87,6 @@ namespace ICNC.ERP.Rpi{
                     while (!process.StandardError.EndOfStream)
                         _logger.LogError(process.StandardError.ReadLine());
                 }
-            
-            await channel.ShutdownAsync();
             return ;
             
         }

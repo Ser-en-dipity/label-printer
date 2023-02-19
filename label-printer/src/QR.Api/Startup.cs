@@ -5,8 +5,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using ICNC.ERP.Rpi;
-using Grpc;
+using Grpc.Core;
+using System;
 using ICNC.Rpi;
+using Grpc.Net.ClientFactory;
 
 namespace QR.Api {
   public class Startup {
@@ -29,6 +31,17 @@ namespace QR.Api {
       services.AddOptions<MinioOptions>()
           .Bind(Configuration.GetSection(MinioOptions.Minio))
           .ValidateDataAnnotations();
+      GrpcOption grpcOption =
+              Configuration.GetSection(GrpcOption.GRPC).Get<GrpcOption>();
+      services.AddGrpcClient<PrintCmdHandler.PrintCmdHandlerClient>(o =>
+      {
+          o.Address = new Uri(grpcOption.Endpoint);
+      })
+      .ConfigureChannel(copt => {
+          if (!grpcOption.SSL) {
+            copt.Credentials = ChannelCredentials.Insecure;
+          }
+        });
       services.AddHostedService<Worker>();
     }
 
