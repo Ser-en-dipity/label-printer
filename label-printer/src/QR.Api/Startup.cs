@@ -8,7 +8,7 @@ using ICNC.ERP.Rpi;
 using Grpc.Core;
 using System;
 using ICNC.Rpi;
-using Grpc.Net.ClientFactory;
+using System.Net.Http;
 
 namespace QR.Api {
   public class Startup {
@@ -33,13 +33,17 @@ namespace QR.Api {
           .ValidateDataAnnotations();
       GrpcOption grpcOption =
               Configuration.GetSection(GrpcOption.GRPC).Get<GrpcOption>();
+      var httpHandler = new HttpClientHandler();
+      httpHandler.ServerCertificateCustomValidationCallback = 
+        HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
       services.AddGrpcClient<PrintCmdHandler.PrintCmdHandlerClient>(o =>
       {
           o.Address = new Uri(grpcOption.Endpoint);
       })
       .ConfigureChannel(copt => {
           if (!grpcOption.SSL) {
-            copt.Credentials = ChannelCredentials.Insecure;
+            // copt.Credentials = ChannelCredentials.Insecure;
+            copt.HttpHandler = httpHandler;
           }
         });
       services.AddHostedService<Worker>();

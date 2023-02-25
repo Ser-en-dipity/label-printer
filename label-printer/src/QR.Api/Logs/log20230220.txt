@@ -1,0 +1,968 @@
+2023-02-20 01:43:33.460 +00:00 [DBG] Hosting starting
+2023-02-20 01:43:33.990 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 01:43:34.067 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 01:43:34.084 +00:00 [DBG] Channel picker updated.
+2023-02-20 01:43:34.099 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 01:43:34.112 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 01:43:34.178 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 01:43:34.181 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 01:43:34.183 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 01:43:34.183 +00:00 [DBG] Channel picker updated.
+2023-02-20 01:43:34.179 +00:00 [DBG] Picked queued.
+2023-02-20 01:43:34.190 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 01:43:34.207 +00:00 [INF] Start processing HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 01:43:34.211 +00:00 [INF] Sending HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 01:43:34.498 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 01:43:34.543 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 01:43:34.649 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 01:43:34.651 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 01:43:34.653 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 01:43:34.655 +00:00 [INF] Hosting environment: Development
+2023-02-20 01:43:34.657 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 01:43:34.658 +00:00 [DBG] Hosting started
+2023-02-20 01:43:34.690 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 01:43:34.694 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 01:43:34.694 +00:00 [DBG] Channel picker updated.
+2023-02-20 01:43:34.759 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 01:43:34.830 +00:00 [INF] Call failed with gRPC error status. Status code: '"Internal"', Message: 'Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors'.
+2023-02-20 01:43:34.831 +00:00 [DBG] Finished gRPC call.
+2023-02-20 01:43:34.839 +00:00 [DBG] gRPC call canceled.
+2023-02-20 01:43:34.855 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Internal", Detail="Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors", DebugException="System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 01:43:49.723 +00:00 [INF] Application is shutting down...
+2023-02-20 01:43:49.726 +00:00 [DBG] Hosting stopping
+2023-02-20 01:43:49.792 +00:00 [DBG] Hosting stopped
+2023-02-20 01:44:55.980 +00:00 [DBG] Hosting starting
+2023-02-20 07:27:27.697 +00:00 [DBG] Hosting starting
+2023-02-20 07:27:28.206 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 07:27:28.282 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 07:27:28.301 +00:00 [DBG] Channel picker updated.
+2023-02-20 07:27:28.318 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 07:27:28.334 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 07:27:28.398 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 07:27:28.400 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 07:27:28.401 +00:00 [DBG] Picked queued.
+2023-02-20 07:27:28.403 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 07:27:28.403 +00:00 [DBG] Channel picker updated.
+2023-02-20 07:27:28.407 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 07:27:28.429 +00:00 [INF] Start processing HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 07:27:28.433 +00:00 [INF] Sending HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 07:27:28.585 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 07:27:28.589 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 07:27:28.590 +00:00 [DBG] Channel picker updated.
+2023-02-20 07:27:28.644 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 07:27:28.725 +00:00 [INF] Call failed with gRPC error status. Status code: '"Internal"', Message: 'Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: Cannot determine the frame size or a corrupted frame was received.'.
+2023-02-20 07:27:28.727 +00:00 [DBG] Finished gRPC call.
+2023-02-20 07:27:28.736 +00:00 [DBG] gRPC call canceled.
+2023-02-20 07:27:28.757 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 07:27:28.758 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Internal", Detail="Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: Cannot determine the frame size or a corrupted frame was received.", DebugException="System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 07:27:28.802 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 07:27:28.894 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 07:27:28.895 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 07:27:28.905 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 07:27:28.906 +00:00 [INF] Hosting environment: Development
+2023-02-20 07:27:28.907 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 07:27:28.907 +00:00 [DBG] Hosting started
+2023-02-20 07:28:29.269 +00:00 [INF] Application is shutting down...
+2023-02-20 07:28:29.278 +00:00 [DBG] Hosting stopping
+2023-02-20 07:28:29.359 +00:00 [DBG] Hosting stopped
+2023-02-20 08:18:20.865 +00:00 [DBG] Hosting starting
+2023-02-20 08:30:59.377 +00:00 [DBG] Hosting starting
+2023-02-20 08:30:59.958 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 08:31:00.050 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 08:31:00.071 +00:00 [DBG] Channel picker updated.
+2023-02-20 08:31:00.089 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 08:31:00.106 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 08:31:00.180 +00:00 [DBG] Picked queued.
+2023-02-20 08:31:00.190 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 08:31:00.191 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 08:31:00.194 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 08:31:00.195 +00:00 [DBG] Channel picker updated.
+2023-02-20 08:31:00.203 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 08:31:00.231 +00:00 [INF] Start processing HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 08:31:00.239 +00:00 [INF] Sending HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 08:31:00.441 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 08:31:00.449 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 08:31:00.451 +00:00 [DBG] Channel picker updated.
+2023-02-20 08:31:00.530 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 08:31:00.599 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 08:31:00.521 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 08:31:00.650 +00:00 [INF] Call failed with gRPC error status. Status code: '"Internal"', Message: 'Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: Cannot determine the frame size or a corrupted frame was received.'.
+2023-02-20 08:31:00.653 +00:00 [DBG] Finished gRPC call.
+2023-02-20 08:31:00.665 +00:00 [DBG] gRPC call canceled.
+2023-02-20 08:31:00.696 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Internal", Detail="Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: Cannot determine the frame size or a corrupted frame was received.", DebugException="System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 08:31:00.734 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 08:31:00.736 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 08:31:00.738 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 08:31:00.741 +00:00 [INF] Hosting environment: Development
+2023-02-20 08:31:00.743 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 08:31:00.746 +00:00 [DBG] Hosting started
+2023-02-20 08:32:59.653 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client 'PrintCmdHandlerClient'
+2023-02-20 08:33:09.674 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:33:09.689 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.3103ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:33:19.692 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:33:19.693 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0204ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:33:29.693 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:33:29.696 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0077ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:33:39.699 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:33:39.700 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0081ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:33:49.705 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:33:49.706 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.006ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:33:59.708 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:33:59.710 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0064ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:34:09.711 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:34:09.713 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0074ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:34:19.717 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:34:19.717 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0077ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:34:29.718 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:34:29.720 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0079ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:34:39.722 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:34:39.723 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0209ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:34:49.724 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:34:49.725 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0055ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:34:59.727 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:34:59.728 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0064ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:35:09.730 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 08:35:09.731 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0118ms - processed: 0 items - remaining: 1 items
+2023-02-20 08:35:13.171 +00:00 [INF] Application is shutting down...
+2023-02-20 08:35:13.178 +00:00 [DBG] Hosting stopping
+2023-02-20 08:35:13.246 +00:00 [DBG] Hosting stopped
+2023-02-20 08:41:55.712 +00:00 [DBG] Hosting starting
+2023-02-20 08:41:56.266 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 08:41:56.360 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 08:41:56.381 +00:00 [DBG] Channel picker updated.
+2023-02-20 08:41:56.398 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 08:41:56.414 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 08:41:56.484 +00:00 [DBG] Picked queued.
+2023-02-20 08:41:56.500 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 08:41:56.502 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 08:41:56.507 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 08:41:56.510 +00:00 [DBG] Channel picker updated.
+2023-02-20 08:41:56.524 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 08:41:56.553 +00:00 [INF] Start processing HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 08:41:56.560 +00:00 [INF] Sending HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 08:41:56.753 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 08:41:56.798 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 08:41:56.927 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 08:41:56.928 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 08:41:56.930 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 08:41:56.932 +00:00 [INF] Hosting environment: Development
+2023-02-20 08:41:56.933 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 08:41:56.935 +00:00 [DBG] Hosting started
+2023-02-20 08:41:57.136 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 08:41:57.139 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 08:41:57.139 +00:00 [DBG] Channel picker updated.
+2023-02-20 08:41:57.191 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 08:41:57.252 +00:00 [INF] Call failed with gRPC error status. Status code: '"Internal"', Message: 'Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors'.
+2023-02-20 08:41:57.255 +00:00 [DBG] Finished gRPC call.
+2023-02-20 08:41:57.263 +00:00 [DBG] gRPC call canceled.
+2023-02-20 08:41:57.283 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Internal", Detail="Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors", DebugException="System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 08:42:48.209 +00:00 [INF] Application is shutting down...
+2023-02-20 08:42:48.216 +00:00 [DBG] Hosting stopping
+2023-02-20 08:42:48.279 +00:00 [DBG] Hosting stopped
+2023-02-20 10:04:26.785 +00:00 [DBG] Hosting starting
+2023-02-20 10:04:27.389 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 10:04:27.487 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 10:04:27.510 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:04:27.528 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 10:04:27.543 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 10:04:27.617 +00:00 [DBG] Picked queued.
+2023-02-20 10:04:27.629 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 10:04:27.633 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 10:04:27.638 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 10:04:27.640 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:04:27.649 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 10:04:27.674 +00:00 [INF] Start processing HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 10:04:27.680 +00:00 [INF] Sending HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 10:04:27.894 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 10:04:27.939 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 10:04:28.053 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 10:04:28.055 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 10:04:28.057 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 10:04:28.059 +00:00 [INF] Hosting environment: Development
+2023-02-20 10:04:28.060 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 10:04:28.061 +00:00 [DBG] Hosting started
+2023-02-20 10:04:28.274 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 10:04:28.278 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 10:04:28.281 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:04:28.340 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 10:04:28.405 +00:00 [INF] Call failed with gRPC error status. Status code: '"Internal"', Message: 'Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors'.
+2023-02-20 10:04:28.407 +00:00 [DBG] Finished gRPC call.
+2023-02-20 10:04:28.416 +00:00 [DBG] gRPC call canceled.
+2023-02-20 10:04:28.438 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Internal", Detail="Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors", DebugException="System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 10:06:27.066 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client 'PrintCmdHandlerClient'
+2023-02-20 10:06:37.082 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:06:37.098 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.2837ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:06:47.101 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:06:47.103 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0221ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:06:57.107 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:06:57.108 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0086ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:07:07.111 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:07:07.112 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0094ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:07:17.117 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:07:17.120 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.009ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:07:27.122 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:07:27.125 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0092ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:07:37.127 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:07:37.130 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0093ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:07:47.129 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:07:47.130 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0093ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:07:57.131 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:07:57.133 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:08:07.135 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:08:07.136 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0079ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:08:17.139 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:08:17.139 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.006ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:08:27.142 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:08:27.143 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0079ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:08:37.144 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:08:37.145 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0108ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:08:47.146 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:08:47.146 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.006ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:08:57.150 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:08:57.152 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0166ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:09:07.156 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:09:07.156 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0065ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:09:17.158 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:09:17.159 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0063ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:09:27.160 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:09:27.160 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0072ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:09:37.164 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:09:37.165 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0053ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:09:47.166 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:09:47.167 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0069ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:09:57.170 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:09:57.170 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0048ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:10:07.171 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:10:07.172 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0056ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:10:17.169 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:10:17.170 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0088ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:10:27.172 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:10:27.173 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0049ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:10:37.174 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:10:37.174 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0067ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:10:47.176 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:10:47.177 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0067ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:10:57.178 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:10:57.179 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0063ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:11:07.180 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:11:07.181 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0073ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:11:17.184 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:11:17.185 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0074ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:11:27.188 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:11:27.189 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0165ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:11:37.191 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:11:37.194 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0211ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:11:47.195 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:11:47.196 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0028ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:11:57.201 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:11:57.202 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0036ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:12:07.204 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:12:07.204 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0026ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:12:17.205 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:12:17.206 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0042ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:12:27.207 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:12:27.208 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0029ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:12:37.209 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:12:37.209 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.003ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:12:47.211 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:12:47.212 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0037ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:12:57.213 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:12:57.214 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0024ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:13:07.216 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:13:07.217 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0021ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:13:17.218 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:13:17.219 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0027ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:13:27.220 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:13:27.220 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0021ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:13:37.222 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:13:37.223 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0025ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:13:47.223 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:13:47.224 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0035ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:13:57.226 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:13:57.227 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0032ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:14:07.228 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:14:07.228 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0025ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:14:17.233 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:14:17.233 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0028ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:14:27.234 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:14:27.234 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0026ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:14:37.235 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:14:37.235 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.003ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:14:47.236 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:14:47.236 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0022ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:14:57.237 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:14:57.238 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0022ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:15:07.240 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:15:07.241 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0039ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:15:17.245 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:15:17.246 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0031ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:15:27.245 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:15:27.245 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.002ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:15:37.246 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:15:37.247 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0035ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:15:47.249 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:15:47.249 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0027ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:15:57.251 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:15:57.251 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0036ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:16:07.254 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:16:07.255 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0031ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:16:17.256 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:16:17.257 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0027ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:16:27.257 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:16:27.258 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0027ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:16:37.264 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:16:37.265 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0026ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:16:47.266 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:16:47.267 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0031ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:16:57.270 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:16:57.270 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0035ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:17:07.271 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:17:07.271 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0032ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:17:17.276 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:17:17.277 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0024ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:17:27.278 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:17:27.279 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0036ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:17:37.280 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:17:37.282 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0046ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:17:47.284 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:17:47.285 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0043ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:17:57.287 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:17:57.287 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0035ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:18:07.289 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:18:07.290 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0025ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:18:17.291 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:18:17.291 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0026ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:18:27.293 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:18:27.294 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0037ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:18:37.297 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:18:37.298 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0036ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:18:47.300 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:18:47.300 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0027ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:18:57.301 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:18:57.301 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0027ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:19:07.303 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:19:07.304 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.003ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:19:17.306 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:19:17.306 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0027ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:19:27.307 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:19:27.308 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0029ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:19:37.309 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:19:37.311 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0037ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:19:47.309 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:19:47.310 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0026ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:19:57.311 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:19:57.311 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0043ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:20:07.309 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:20:07.310 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0039ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:20:17.312 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:20:17.312 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0033ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:20:27.316 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:20:27.316 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0027ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:20:37.318 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:20:37.318 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0034ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:20:47.325 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:20:47.325 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.004ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:20:57.327 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:20:57.327 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0028ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:21:07.329 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:21:07.329 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0025ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:21:17.331 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:21:17.331 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0024ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:21:27.333 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:21:27.333 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0032ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:21:37.335 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:21:37.336 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0031ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:21:47.338 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:21:47.339 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0039ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:21:57.339 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:21:57.340 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0036ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:22:07.343 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:22:07.344 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0038ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:22:17.346 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:22:17.346 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0034ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:22:27.348 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:22:27.349 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0019ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:22:36.481 +00:00 [INF] Application is shutting down...
+2023-02-20 10:22:36.485 +00:00 [DBG] Hosting stopping
+2023-02-20 10:22:36.525 +00:00 [DBG] Hosting stopped
+2023-02-20 10:22:49.499 +00:00 [DBG] Hosting starting
+2023-02-20 10:22:50.094 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 10:22:50.190 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 10:22:50.220 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:22:50.237 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 10:22:50.254 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 10:22:50.336 +00:00 [DBG] Picked queued.
+2023-02-20 10:22:50.344 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 10:22:50.349 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 10:22:50.354 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 10:22:50.358 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:22:50.374 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 10:22:50.414 +00:00 [INF] Start processing HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 10:22:50.419 +00:00 [INF] Sending HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 10:22:50.622 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 10:22:50.681 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 10:22:50.799 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 10:22:50.801 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 10:22:50.803 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 10:22:50.806 +00:00 [INF] Hosting environment: Development
+2023-02-20 10:22:50.807 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 10:22:50.808 +00:00 [DBG] Hosting started
+2023-02-20 10:22:50.999 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 10:22:51.002 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 10:22:51.004 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:22:51.061 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 10:22:51.133 +00:00 [INF] Call failed with gRPC error status. Status code: '"Internal"', Message: 'Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors'.
+2023-02-20 10:22:51.136 +00:00 [DBG] Finished gRPC call.
+2023-02-20 10:22:51.145 +00:00 [DBG] gRPC call canceled.
+2023-02-20 10:22:51.166 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Internal", Detail="Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors", DebugException="System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch, RemoteCertificateChainErrors
+   at System.Net.Security.SslStream.SendAuthResetSignal(ProtocolToken message, ExceptionDispatchInfo exception)
+   at System.Net.Security.SslStream.CompleteHandshake(SslAuthenticationOptions sslAuthenticationOptions)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 10:24:49.799 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client 'PrintCmdHandlerClient'
+2023-02-20 10:24:59.819 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:24:59.836 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.3011ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:25:09.839 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:25:09.840 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0202ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:25:19.842 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:25:19.844 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0079ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:25:29.846 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:25:29.849 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0087ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:25:39.851 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:25:39.853 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0105ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:25:49.855 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:25:49.858 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0089ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:25:59.862 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:25:59.864 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:26:09.865 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:26:09.866 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0097ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:26:19.868 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:26:19.870 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0531ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:26:25.698 +00:00 [INF] Application is shutting down...
+2023-02-20 10:26:25.702 +00:00 [DBG] Hosting stopping
+2023-02-20 10:26:25.744 +00:00 [DBG] Hosting stopped
+2023-02-20 10:31:21.546 +00:00 [DBG] Hosting starting
+2023-02-20 10:31:22.141 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 10:31:22.249 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 10:31:22.271 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:31:22.290 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 10:31:22.310 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 10:31:22.387 +00:00 [DBG] Picked queued.
+2023-02-20 10:31:22.397 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 10:31:22.399 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 10:31:22.402 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 10:31:22.404 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:31:22.420 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 10:31:22.451 +00:00 [INF] Start processing HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 10:31:22.462 +00:00 [INF] Sending HTTP request POST https://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 10:31:22.688 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 10:31:22.695 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 10:31:22.688 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 10:31:22.699 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:31:22.759 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 10:31:22.804 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 10:31:22.911 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 10:31:22.913 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 10:31:22.918 +00:00 [INF] Call failed with gRPC error status. Status code: '"Internal"', Message: 'Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: Cannot determine the frame size or a corrupted frame was received.'.
+2023-02-20 10:31:22.920 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 10:31:22.922 +00:00 [INF] Hosting environment: Development
+2023-02-20 10:31:22.926 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 10:31:22.929 +00:00 [DBG] Hosting started
+2023-02-20 10:31:22.924 +00:00 [DBG] Finished gRPC call.
+2023-02-20 10:31:22.941 +00:00 [DBG] gRPC call canceled.
+2023-02-20 10:31:22.961 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Internal", Detail="Error starting gRPC call. HttpRequestException: The SSL connection could not be established, see inner exception. AuthenticationException: Cannot determine the frame size or a corrupted frame was received.", DebugException="System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp2ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 10:31:41.976 +00:00 [DBG] Config reload token fired. Checking for changes...
+2023-02-20 10:31:42.668 +00:00 [INF] Application is shutting down...
+2023-02-20 10:31:42.674 +00:00 [DBG] Hosting stopping
+2023-02-20 10:31:42.713 +00:00 [DBG] Hosting stopped
+2023-02-20 10:32:00.958 +00:00 [DBG] Hosting starting
+2023-02-20 10:32:01.537 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"http://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 10:32:01.630 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 10:32:01.652 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:32:01.669 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 10:32:01.686 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 10:32:01.764 +00:00 [DBG] Picked queued.
+2023-02-20 10:32:01.771 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 10:32:01.773 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 10:32:01.777 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 10:32:01.778 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:32:01.790 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 10:32:01.814 +00:00 [INF] Start processing HTTP request POST http://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 10:32:01.821 +00:00 [INF] Sending HTTP request POST http://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 10:32:02.014 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 10:32:02.024 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 10:32:02.025 +00:00 [DBG] Channel picker updated.
+2023-02-20 10:32:02.028 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 10:32:02.076 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 10:32:02.078 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: An HTTP/2 connection could not be established because the server did not complete the HTTP/2 handshake.
+ ---> System.Net.Http.HttpProtocolException: The HTTP/2 server closed the connection. HTTP/2 error code 'HTTP_1_1_REQUIRED' (0xd).
+   at System.Net.Http.Http2Connection.ThrowProtocolError(Http2ProtocolErrorCode errorCode, String message)
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   at System.Net.Http.Http2Connection.SendHeadersAsync(HttpRequestMessage request, CancellationToken cancellationToken, Boolean mustFlush)
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 10:32:02.162 +00:00 [INF] Call failed with gRPC error status. Status code: '"Unavailable"', Message: 'Error starting gRPC call. HttpRequestException: An error occurred while sending the request. IOException: An HTTP/2 connection could not be established because the server did not complete the HTTP/2 handshake. HttpProtocolException: The HTTP/2 server closed the connection. HTTP/2 error code 'HTTP_1_1_REQUIRED' (0xd).'.
+2023-02-20 10:32:02.164 +00:00 [DBG] Finished gRPC call.
+2023-02-20 10:32:02.173 +00:00 [DBG] gRPC call canceled.
+2023-02-20 10:32:02.190 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 10:32:02.192 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 10:32:02.194 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 10:32:02.197 +00:00 [INF] Hosting environment: Development
+2023-02-20 10:32:02.199 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 10:32:02.201 +00:00 [DBG] Hosting started
+2023-02-20 10:32:02.222 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error starting gRPC call. HttpRequestException: An error occurred while sending the request. IOException: An HTTP/2 connection could not be established because the server did not complete the HTTP/2 handshake. HttpProtocolException: The HTTP/2 server closed the connection. HTTP/2 error code 'HTTP_1_1_REQUIRED' (0xd).", DebugException="System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: An HTTP/2 connection could not be established because the server did not complete the HTTP/2 handshake.
+ ---> System.Net.Http.HttpProtocolException: The HTTP/2 server closed the connection. HTTP/2 error code 'HTTP_1_1_REQUIRED' (0xd).
+   at System.Net.Http.Http2Connection.ThrowProtocolError(Http2ProtocolErrorCode errorCode, String message)
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   at System.Net.Http.Http2Connection.SendHeadersAsync(HttpRequestMessage request, CancellationToken cancellationToken, Boolean mustFlush)
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 10:34:01.242 +00:00 [DBG] HttpMessageHandler expired after 120000ms for client 'PrintCmdHandlerClient'
+2023-02-20 10:34:11.254 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:34:11.264 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.234ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:34:21.267 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:34:21.268 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0241ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:34:31.271 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:34:31.272 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0073ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:34:41.276 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:34:41.278 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0094ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:34:51.280 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:34:51.280 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0078ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:35:01.282 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:35:01.283 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0055ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:35:11.285 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:35:11.288 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0108ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:35:21.293 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:35:21.294 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0119ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:35:31.297 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:35:31.299 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0082ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:35:41.301 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:35:41.302 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0095ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:35:51.305 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:35:51.306 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0083ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:36:01.305 +00:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2023-02-20 10:36:01.310 +00:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0096ms - processed: 0 items - remaining: 1 items
+2023-02-20 10:36:09.730 +00:00 [INF] Application is shutting down...
+2023-02-20 10:36:09.732 +00:00 [DBG] Hosting stopping
+2023-02-20 10:36:09.770 +00:00 [DBG] Hosting stopped
+2023-02-20 12:17:20.615 +00:00 [DBG] Hosting starting
+2023-02-20 12:17:21.351 +00:00 [DBG] Starting gRPC call. Method type: '"ServerStreaming"', URI: '"http://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel"'.
+2023-02-20 12:17:21.457 +00:00 [DBG] Subchannel id '1' created with addresses: 192.168.12.41:5000
+2023-02-20 12:17:21.478 +00:00 [DBG] Channel picker updated.
+2023-02-20 12:17:21.496 +00:00 [DBG] Subchannel id '1' state changed to "Connecting". Detail: 'Connection requested.'.
+2023-02-20 12:17:21.517 +00:00 [DBG] Channel state updated to "Connecting".
+2023-02-20 12:17:21.602 +00:00 [DBG] Picked queued.
+2023-02-20 12:17:21.636 +00:00 [DBG] Subchannel id '1' connected to socket 192.168.12.41:5000.
+2023-02-20 12:17:21.638 +00:00 [DBG] Subchannel id '1' state changed to "Ready". Detail: 'Successfully connected to socket.'.
+2023-02-20 12:17:21.639 +00:00 [DBG] Channel state updated to "Ready".
+2023-02-20 12:17:21.640 +00:00 [DBG] Channel picker updated.
+2023-02-20 12:17:21.651 +00:00 [DBG] Successfully picked subchannel id '1' with address 192.168.12.41:5000.
+2023-02-20 12:17:21.691 +00:00 [INF] Start processing HTTP request POST http://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 12:17:21.696 +00:00 [INF] Sending HTTP request POST http://192.168.12.41:5000/ICNC.ERP.Rpi.PrintCmdHandler/PrintLabel
+2023-02-20 12:17:21.989 +00:00 [DBG] Subchannel id '1' state changed to "Idle". Detail: 'Disconnected.'.
+2023-02-20 12:17:21.992 +00:00 [DBG] Channel state updated to "Idle".
+2023-02-20 12:17:21.993 +00:00 [DBG] Channel picker updated.
+2023-02-20 12:17:22.016 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider"]
+2023-02-20 12:17:22.113 +00:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-02-20 12:17:22.100 +00:00 [ERR] Error starting gRPC call.
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: An HTTP/2 connection could not be established because the server did not complete the HTTP/2 handshake.
+ ---> System.Net.Http.HttpProtocolException: The HTTP/2 server closed the connection. HTTP/2 error code 'HTTP_1_1_REQUIRED' (0xd).
+   at System.Net.Http.Http2Connection.ThrowProtocolError(Http2ProtocolErrorCode errorCode, String message)
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   at System.Net.Http.Http2Connection.SendHeadersAsync(HttpRequestMessage request, CancellationToken cancellationToken, Boolean mustFlush)
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)
+2023-02-20 12:17:22.249 +00:00 [INF] Call failed with gRPC error status. Status code: '"Unavailable"', Message: 'Error starting gRPC call. HttpRequestException: An error occurred while sending the request. IOException: An HTTP/2 connection could not be established because the server did not complete the HTTP/2 handshake. HttpProtocolException: The HTTP/2 server closed the connection. HTTP/2 error code 'HTTP_1_1_REQUIRED' (0xd).'.
+2023-02-20 12:17:22.252 +00:00 [DBG] Finished gRPC call.
+2023-02-20 12:17:22.259 +00:00 [INF] Now listening on: http://0.0.0.0:5100
+2023-02-20 12:17:22.266 +00:00 [DBG] Loaded hosting startup assembly QR.Api
+2023-02-20 12:17:22.268 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-20 12:17:22.270 +00:00 [INF] Hosting environment: Development
+2023-02-20 12:17:22.271 +00:00 [INF] Content root path: /home/king/label-printer/label-printer/src/QR.Api
+2023-02-20 12:17:22.273 +00:00 [DBG] Hosting started
+2023-02-20 12:17:22.290 +00:00 [DBG] gRPC call canceled.
+2023-02-20 12:17:22.319 +00:00 [WRN] grpc call failed
+Grpc.Core.RpcException: Status(StatusCode="Unavailable", Detail="Error starting gRPC call. HttpRequestException: An error occurred while sending the request. IOException: An HTTP/2 connection could not be established because the server did not complete the HTTP/2 handshake. HttpProtocolException: The HTTP/2 server closed the connection. HTTP/2 error code 'HTTP_1_1_REQUIRED' (0xd).", DebugException="System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: An HTTP/2 connection could not be established because the server did not complete the HTTP/2 handshake.
+ ---> System.Net.Http.HttpProtocolException: The HTTP/2 server closed the connection. HTTP/2 error code 'HTTP_1_1_REQUIRED' (0xd).
+   at System.Net.Http.Http2Connection.ThrowProtocolError(Http2ProtocolErrorCode errorCode, String message)
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.ProcessIncomingFramesAsync()
+   at System.Net.Http.Http2Connection.SendHeadersAsync(HttpRequestMessage request, CancellationToken cancellationToken, Boolean mustFlush)
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.Http2Connection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.BalancerHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Internal.GrpcCall`2.RunCall(HttpRequestMessage request, Nullable`1 timeout)")
+   at Grpc.Net.Client.Internal.HttpContentClientStreamReader`2.MoveNextCore(CancellationToken cancellationToken)
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+MoveNext()
+   at Grpc.Core.AsyncStreamReaderExtensions.ReadAllAsyncCore[T](IAsyncStreamReader`1 streamReader, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.DoWork() in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 62
+   at ICNC.ERP.Rpi.Worker.ExecuteAsync(CancellationToken cancellationToken) in /home/king/label-printer/label-printer/src/QR.Api/Work.cs:line 39
+2023-02-20 12:17:30.376 +00:00 [INF] Application is shutting down...
+2023-02-20 12:17:30.379 +00:00 [DBG] Hosting stopping
+2023-02-20 12:17:30.417 +00:00 [DBG] Hosting stopped
